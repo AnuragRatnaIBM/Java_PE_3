@@ -32,4 +32,17 @@ public class ChessBoardTest {
         String actualValue=chessBoard.chess(str);
         assertEquals(expectedValue,actualValue);
     }
+    @Test
+    public void chesscheckFail(){
+        String expectedValue="WW|BB|WW|WW|WW|BB|WW|\n" +
+                "BB|WW|BB|WW|BB|WW|BB|\n" +
+                "WW|BB|WW|BB|WW|BB|WW|\n" +
+                "BB|WW|BB|WW|BB|WW|BB|\n" +
+                "WW|BB|WW|BB|WW|BB|WW|\n" +
+                "BB|WW|BB|WW|BB|WW|BB|\n" +
+                "WW|BB|WW|BB|WW|BB|WW|";
+        String str[][]=new String[8][8];
+        String actualValue=chessBoard.chess(str);
+        assertNotEquals(expectedValue,actualValue);
+    }
 }

@@ -18,12 +18,12 @@ public class FirstAndLastDay {
         String temp="";
         Calendar calendar=Calendar.getInstance();
         calendar.set(Calendar.DAY_OF_WEEK,Calendar.MONDAY);
-        DateFormat df = new SimpleDateFormat("EEE dd/MM/yyyy");
-        temp=temp+df.format(calendar.getTime());
+        DateFormat dateFormat = new SimpleDateFormat("EEE dd/MM/yyyy");
+        temp=temp+dateFormat.format(calendar.getTime());
         for (int i = 0; i < 6; i++) {
             calendar.add(Calendar.DATE, 1);
         }
-        temp=temp+"\n"+df.format(calendar.getTime());
+        temp=temp+"\n"+dateFormat.format(calendar.getTime());
         return temp;
     }
 

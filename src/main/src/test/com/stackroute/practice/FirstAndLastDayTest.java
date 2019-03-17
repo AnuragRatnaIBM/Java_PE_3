@@ -22,4 +22,10 @@ public class FirstAndLastDayTest {
                 "Sun 24/02/2019";
         assertEquals(expectedValue,FirstAndLastDay.checkFirstAndLastDay());
     }
+    @Test
+    public void checkFirstAndLastDayFail() {
+        String expectedValue="Mon 18/02/2010\n" +
+                "Sun 24/02/2010";
+        assertNotEquals(expectedValue,FirstAndLastDay.checkFirstAndLastDay());
+    }
 }
